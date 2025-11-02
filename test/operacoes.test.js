@@ -50,10 +50,8 @@ describe('Suíte de Testes Fraca para 50 Operações Aritméticas', () => {
     expect(() => fatorial(-5)).toThrow(/Fatorial não é definido para números negativos\./);
   });
 
-  // 👇 AQUI é o ajuste pra matar o mutante do mediaArray
   test('9. deve calcular a média de um array com múltiplos elementos', () => {
     expect(mediaArray([10, 20, 30])).toBe(20);
-    // mata o mutante: if (false) return 0;
     expect(mediaArray([])).toBe(0);
   });
 
@@ -170,7 +168,6 @@ describe('Suíte de Testes Fraca para 50 Operações Aritméticas', () => {
 
   test('35. deve calcular o produto de um array', () => {
     expect(produtoArray([2, 3, 4])).toBe(24);
-    // este continua vivo, faz parte dos 7 da tua melhor run
     expect(produtoArray([])).toBe(1);
   });
 
